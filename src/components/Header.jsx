@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
+import TertiaryButton from '@/components/Buttons/TertiaryButton'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
@@ -11,33 +12,65 @@ import PrimaryButton from './Buttons/PrimaryButton'
 
 function MobileNavLink({ href, children }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
+    <Popover.Button
+      as={Link}
+      href={href}
+      className="block w-full rounded-lg px-3 py-2 transition duration-300 ease-out hover:bg-[var(--bg-shade)]"
+    >
       {children}
     </Popover.Button>
   )
 }
+;<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth={1.5}
+  stroke="currentColor"
+  className="h-6 w-6"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+  />
+</svg>
+;<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth={1.5}
+  stroke="currentColor"
+  className="h-6 w-6"
+>
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
 
 function MobileNavIcon({ open }) {
   return (
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+      className="h-6 w-6 overflow-visible stroke-[var(--label-base)]"
       fill="none"
-      strokeWidth={2}
+      strokeWidth={1.5}
       strokeLinecap="round"
     >
       <path
-        d="M0 1H14M0 7H14M0 13H14"
-        className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0'
-        )}
-      />
-      <path
-        d="M2 2L12 12M12 2L2 12"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6 18L18 6M6 6l12 12"
         className={clsx(
           'origin-center transition',
           !open && 'scale-90 opacity-0'
+        )}
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        className={clsx(
+          'origin-center transition',
+          open && 'scale-90 opacity-0'
         )}
       />
     </svg>
@@ -63,7 +96,7 @@ function MobileNavigation() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
+          <Popover.Overlay className="fixed inset-0 bg-white/60" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -76,13 +109,15 @@ function MobileNavigation() {
         >
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+            className="absolute inset-x-4 top-full mt-4 flex origin-top flex-col rounded-2xl border border-[var(--bg-border)] bg-[var(--bg-base)] p-2 text-base text-[var(--label-base)] shadow-xl"
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <MobileNavLink href="/pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="/guides">Guides</MobileNavLink>
+            <hr className="mx-3 my-2 border border-black/5" />
+            <MobileNavLink href="https://app.notioncomments.com">
+              Sign in with Notion
+            </MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -92,27 +127,52 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="">
-        <nav className="relative z-50 flex justify-between w-full items-center border-b border-[var(--bg-border)] 
-    bg-[var(--bg-sub)] px-4 sm:px-6 md:px-8 py-3">
-          <Link className="flex gap-2 font-bold text-lg items-center" href="#" aria-label="Home">
-            <Logo className="h-10 w-auto" />
-            <div>NotionComments</div>
-          </Link>
-          <div className="hidden md:flex md:gap-x-6">
-            <NavLink href="#features">Features</NavLink>
-            <NavLink href="#pricing">Pricing</NavLink>
-            <NavLink href="#Guides">Guides</NavLink>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <PrimaryButton onClick={() => {
+    <header className="fixed top-0 w-full">
+      <nav className="relative z-50 flex h-16 w-full items-center justify-between border-b border-[var(--bg-border)] bg-[var(--bg-sub)] px-4 sm:px-6 md:px-8">
+        <Link
+          className="flex items-center gap-2 text-lg font-bold"
+          href="/"
+          aria-label="Home"
+        >
+          <Logo className="h-6 w-6" />
+          <div>NotionComments</div>
+        </Link>
+        <div className="hidden gap-4 md:flex">
+          <TertiaryButton
+            isIcon={false}
+            size="big"
+            text="Features"
+            href="#features"
+            className="font-bold text-[var(--label-base)]"
+          />
+          <TertiaryButton
+            isIcon={false}
+            size="big"
+            text="Pricing"
+            href="/pricing"
+          />
+          <TertiaryButton
+            isIcon={false}
+            size="big"
+            text="Guides"
+            href="/guides"
+          />
+        </div>
+        <div>
+          <PrimaryButton
+            onClick={() => {
               window.open('https://app.notioncomments.com')
-            }} isIcon={false} size='big' text='Sign in with notion' />
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
+            }}
+            isIcon={false}
+            size="big"
+            text="Sign in with Notion"
+            className="hidden md:block"
+          />
+          <div className="md:hidden">
+            <MobileNavigation />
           </div>
-        </nav>
+        </div>
+      </nav>
     </header>
   )
 }
