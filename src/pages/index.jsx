@@ -21,10 +21,10 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main className="mt-32 md:mt-48">
+      <main className="mt-32 flex flex-col gap-32 md:mt-48">
         <Hero />
         <Features />
-        {/* <SecondaryFeatures /> */}
+        <GettingStarted />
         <CallToAction />
         <Testimonials />
         <Pricing />

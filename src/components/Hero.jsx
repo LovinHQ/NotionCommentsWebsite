@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function Hero() {
   return (
-    <Container className="flex flex-col text-left">
+    <Container className="flex flex-1 flex-col justify-start">
       <h1 className="max-w-[720px] text-[64px] font-bold leading-tight tracking-tighter text-[var(--label-title)] sm:text-7xl">
         Comment made easy for your Notion post
       </h1>
