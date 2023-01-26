@@ -1,12 +1,11 @@
 import { Container } from '@/components/Container'
 import PrimaryCTAButton from './Buttons/PrimaryCTAButton'
 import SecondaryCTAButton from './Buttons/SecondaryCTAButton'
-import Image from 'next/image'
 
 export function Hero() {
   return (
-    <Container className="flex flex-1 flex-col justify-start">
-      <h1 className="max-w-[720px] text-[64px] font-bold leading-tight tracking-tighter text-[var(--label-title)] sm:text-7xl">
+    <Container className="flex w-screen flex-col">
+      <h1 className="max-w-[720px] text-5xl font-bold leading-tight tracking-tighter text-[var(--label-title)] sm:text-7xl">
         Comment made easy for your Notion post
       </h1>
       <p className="mt-8 max-w-[720px] text-2xl text-[var(--label-muted)]">
