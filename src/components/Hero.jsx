@@ -49,7 +49,6 @@ export function Hero() {
           who use NotionComments to engage with their audience.
         </p>
       </div>
-      <div className="demo h-[62.5%] w-full rounded-3xl"></div>
     </Container>
   )
 }

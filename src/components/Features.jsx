@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container'
+import Image from 'next/image'
 import UserIcon from '@/images/icons/user.svg'
 import TimeIcon from '@/images/icons/time.svg'
 import AdjustmentsIcon from '@/images/icons/adjustments.svg'
@@ -49,11 +50,13 @@ const Feature = ({ icon, title, description, image, position }) => {
   return (
     <div
       className={clsx(
-        'flex justify-between gap-20',
-        position === 'left' ? 'flex-row-reverse' : ''
+        'flex flex-col-reverse gap-8 md:gap-20',
+        position === 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
       )}
     >
-      <div className="flex-1 rounded-3xl border border-[var(--bg-border)] bg-[var(--bg-sub)] shadow-md"></div>
+      <div className="flex-1 overflow-hidden rounded-3xl border border-[var(--bg-border)] bg-[var(--bg-sub)] shadow-md">
+        <Image src={image} alt={title} width="0" height="0" />
+      </div>
       <div className="flex flex-1 flex-col gap-10">
         <div className="flex h-12 w-12 items-center justify-center rounded-[20px] border border-[var(--bg-border)] bg-[var(--bg-sub)] text-[var(--label-faint)]">
           {icon}

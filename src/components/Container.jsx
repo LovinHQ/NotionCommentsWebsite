@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-export function Container({ className, ...props }) {
+export function Container({ className, children, ...props }) {
   return (
     <div
       className={clsx(
@@ -8,6 +8,8 @@ export function Container({ className, ...props }) {
         className
       )}
       {...props}
-    />
+    >
+      {children}
+    </div>
   )
 }

@@ -9,6 +9,7 @@ import { Pricing } from '@/components/Pricing'
 import { Features } from '@/components/Features'
 import { GettingStarted } from '@/components/GettingStarted'
 import { Testimonials } from '@/components/Testimonials'
+import { Demo } from '@/components/Demo'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <main className="mt-32 flex flex-col gap-32 md:mt-48">
         <Hero />
+        <Demo />
         <Features />
         <GettingStarted />
         <CallToAction />
