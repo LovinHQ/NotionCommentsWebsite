@@ -79,7 +79,14 @@ export function GettingStarted({ feature, isActive, className, ...props }) {
           <div className="flex-1 max-lg:hidden" />
           <div className="flex flex-1 place-content-center">
             {/* <div className="absolute -mt-4 h-24 w-80 bg-gradient-to-r from-[var(--accent-base)] to-[var(--secondary-base)]" /> */}
-            <button className="accent-border group z-10 flex h-16 w-full gap-4 rounded-3xl bg-[var(--bg-base)] p-3 transition duration-300 ease-out hover:bg-gradient-to-br hover:from-[var(--accent-base)] hover:to-[var(--secondary-base)]">
+            <button
+              onClick={() => {
+                window.open(
+                  'https://twitter.com/NotionComments/status/1602305606592913408?s=20'
+                )
+              }}
+              className="accent-border group z-10 flex h-16 w-full gap-4 rounded-3xl bg-[var(--bg-base)] p-3 transition duration-300 ease-out hover:bg-gradient-to-br hover:from-[var(--accent-base)] hover:to-[var(--secondary-base)]"
+            >
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--bg-border)] transition duration-300 ease-out group-hover:bg-[var(--bg-base)] ">
                 <PlayIcon className="h-6 w-6 text-[var(--accent-label)] transition duration-300 ease-out group-hover:text-[var(--accent-base)]" />
               </div>
