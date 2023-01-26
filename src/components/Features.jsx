@@ -13,7 +13,7 @@ import clsx from 'clsx'
 
 const features = [
   {
-    title: 'Comment without a Notion account.',
+    title: 'Comment without a Notion account',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al. sed do eiusmod tempor incididunt ut labore.',
     image: screenshotPayroll,
@@ -21,7 +21,7 @@ const features = [
     position: 'right',
   },
   {
-    title: 'Get notified in Notion Updates.',
+    title: 'Get notified in Notion Updates',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al. sed do eiusmod tempor incididunt ut labore.',
     image: screenshotExpenses,
@@ -29,7 +29,7 @@ const features = [
     position: 'left',
   },
   {
-    title: 'Manage comments in Notion pages.',
+    title: 'Manage comments in Notion pages',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al. sed do eiusmod tempor incididunt ut labore.',
     image: screenshotVatReturns,
@@ -37,7 +37,7 @@ const features = [
     position: 'right',
   },
   {
-    title: 'Email notification for commenters.',
+    title: 'Email notification for commenters',
     description:
       'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
     image: screenshotReporting,
@@ -79,7 +79,7 @@ export function Features() {
     <Container id="features" aria-label="Features" className="gap-20">
       <div className="flex flex-col justify-center">
         <SectionTag text="FEATURES" />
-        <h1 className="my-4 flex justify-center text-center text-5xl font-bold leading-normal text-[var(--label-title)]">
+        <h1 className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
           Engage with your audience
         </h1>
         <h3 className="m-auto flex max-w-4xl justify-center text-center text-lg font-medium leading-normal text-[var(--label-muted)]">

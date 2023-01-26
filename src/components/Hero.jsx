@@ -12,7 +12,7 @@ export function Hero() {
         Create a comment embed in your Notion page that everyone can use. It
         takes one minute to set up, and it’s free!
       </p>
-      <div className="mt-16 flex gap-x-6">
+      <div className="mt-16 flex flex-col gap-6 sm:flex-row">
         <PrimaryCTAButton text="Get started for free" isIcon={false} />
         <SecondaryCTAButton text="Try a demo" isIcon={false} />
       </div>

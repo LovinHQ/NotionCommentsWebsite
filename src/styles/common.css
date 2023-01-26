@@ -61,6 +61,8 @@ input::placeholder {
   --accent-muted: rgba(255, 255, 255, 1);
   --accent-linear: linear-gradient(90deg, #ff3f1f 0%, #ff981f 100%);
 
+  --secondary-base: #ff981f 100%;
+
   --semantic-danger-label: rgba(148, 11, 11, 1);
   --semantic-danger-base: rgba(210, 76, 76, 1);
   --semantic-danger-border: rgba(249, 178, 178, 1);
