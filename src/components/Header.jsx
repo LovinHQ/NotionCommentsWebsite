@@ -8,7 +8,7 @@ import TertiaryButton from '@/components/Buttons/TertiaryButton'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
-import PrimaryButton from './Buttons/PrimaryButton'
+import PrimaryButton from '@/components/Buttons/PrimaryButton'
 
 function MobileNavLink({ href, children }) {
   return (

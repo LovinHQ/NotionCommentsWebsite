@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-const TertiaryButton = ({
+const SecondaryButton = ({
   className,
   isIcon = true,
   text = null,
@@ -33,11 +33,11 @@ const TertiaryButton = ({
               ? 'px-2'
               : 'px-2'
           }
-          group relative flex select-none items-center justify-center gap-1 font-medium
-          outline-none transition duration-150 ease-in-out 
-          hover:cursor-pointer hover:bg-[var(--bg-shade)]
-          focus:ring-2 focus:ring-[var(--label-base)] focus:ring-offset-2 focus:ring-offset-[var(--bg-base)] 
-          disabled:cursor-default disabled:text-[var(--label-faint)]
+          inner-border inner-border-[var(--bg-border)] hover:inner-border-[var(--bg-border-strong)] disabled:inner-border-[var(--bg-border)] group flex select-none items-center
+          justify-center gap-1 bg-[var(--bg-sub)] 
+          font-semibold transition duration-150 ease-out 
+          hover:cursor-pointer hover:bg-[var(--bg-shade)] focus:ring-2 focus:ring-[var(--label-base)]
+          focus:ring-offset-2 focus:ring-offset-[var(--bg-base)] disabled:cursor-default disabled:bg-[var(--bg-sub)]
           `,
         className
       )}
@@ -45,7 +45,7 @@ const TertiaryButton = ({
       {children}
       {text && (
         <span
-          className={`font-normal text-[var(--label-muted)] transition duration-150 ease-in-out group-hover:text-[var(--label-title)] group-disabled:text-[var(--label-faint)]`}
+          className={`text-[var(--label-base)] transition duration-150 ease-out group-hover:text-[var(--label-title)] group-disabled:text-[var(--label-faint)]`}
         >
           {text}
         </span>
@@ -54,4 +54,4 @@ const TertiaryButton = ({
   )
 }
 
-export default TertiaryButton
+export default SecondaryButton

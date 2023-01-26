@@ -21,7 +21,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main>
+      <main className="mt-32 md:mt-48">
         <Hero />
         <PrimaryFeatures />
         {/* <SecondaryFeatures /> */}

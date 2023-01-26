@@ -1,153 +1,167 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-size: var(--body-regular-regular);
-    background-color: var(--bg-base);
-    color: var(--label-base);
-    font-family: "Inter UI", ui-sans-serif, -apple-system, Arial, Helvetica, "Apple Color Emoji", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    scrollbar-width: none;
-    /* Firefox */
+  padding: 0;
+  margin: 0;
+  font-size: var(--body-regular-regular);
+  background-color: var(--bg-base);
+  color: var(--label-base);
+  font-family: 'Inter UI', ui-sans-serif, -apple-system, Arial, Helvetica,
+    'Apple Color Emoji', sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+::selection {
+  background-color: var(--bg-shade);
 }
 
 ::-webkit-scrollbar {
-    display: none;
-    /* Chrome Safari */
+  display: none;
+  /* Chrome Safari */
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input::placeholder {
-    color: var(--label-faint)
+  color: var(--label-faint);
 }
 
 :root {
-    --font-weight-bold: 700;
-    --font-weight-medium: 500;
-    --font-weight-regular: 400;
-    /* Color styles */
-    --bg-base: rgba(255, 255, 255, 1);
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  /* Color styles */
+  --bg-base: rgba(255, 255, 255, 1);
 
-    --bg-sub: rgba(251, 251, 251, 1);
+  --bg-sub: rgba(251, 251, 251, 1);
 
-    --bg-shade: rgba(243, 243, 243, 1);
+  --bg-shade: rgba(243, 243, 243, 1);
 
-    --bg-border: rgba(222, 222, 222, 1);
+  --bg-border: rgba(222, 222, 222, 1);
 
-    --bg-border-strong: rgba(204, 204, 204, 1);
+  --bg-border-strong: rgba(204, 204, 204, 1);
 
-    --label-title: rgba(0, 0, 0, 1);
+  --label-title: rgba(0, 0, 0, 1);
 
-    --label-base: rgba(47, 47, 47, 1);
+  --label-base: rgba(47, 47, 47, 1);
 
-    --label-muted: rgba(117, 117, 117, 1);
+  --label-muted: rgba(117, 117, 117, 1);
 
-    --label-faint: rgba(169, 169, 169, 1);
+  --label-faint: rgba(169, 169, 169, 1);
 
-    --label-link: rgba(25, 100, 215, 1);
+  --label-link: rgba(25, 100, 215, 1);
 
-    --accent-base: rgba(255, 63, 31, 1);
+  --accent-base: rgba(255, 63, 31, 1);
 
-    --accent-bg: rgba(255, 198, 172, 1);
+  --accent-bg: rgba(255, 198, 172, 1);
 
-    --accent-shade: rgb(235, 27, 0, 1);
+  --accent-shade: rgb(235, 27, 0, 1);
 
-    --accent-label: rgba(255, 255, 255, 1);
+  --accent-label: rgba(255, 255, 255, 1);
 
-    --accent-muted: rgba(255, 255, 255, 1);
+  --accent-muted: rgba(255, 255, 255, 1);
 
-    --semantic-danger-label: rgba(148, 11, 11, 1);
+  --semantic-danger-label: rgba(148, 11, 11, 1);
 
-    --semantic-danger-base: rgba(210, 76, 76, 1);
+  --semantic-danger-base: rgba(210, 76, 76, 1);
 
-    --semantic-danger-border: rgba(249, 178, 178, 1);
+  --semantic-danger-border: rgba(249, 178, 178, 1);
 
-    --semantic-danger-bg: rgba(255, 238, 238, 1);
+  --semantic-danger-bg: rgba(255, 238, 238, 1);
 
-    --semantic-warning-label: rgba(95, 80, 36, 1);
+  --semantic-warning-label: rgba(95, 80, 36, 1);
 
-    --semantic-warning-base: rgba(237, 207, 116, 1);
+  --semantic-warning-base: rgba(237, 207, 116, 1);
 
-    --semantic-warning-border: rgba(245, 227, 172, 1);
+  --semantic-warning-border: rgba(245, 227, 172, 1);
 
-    --semantic-warning-bg: rgba(255, 253, 245, 1);
+  --semantic-warning-bg: rgba(255, 253, 245, 1);
 
-    --semantic-success-label: rgba(51, 91, 55, 1);
+  --semantic-success-label: rgba(51, 91, 55, 1);
 
-    --semantic-success-base: rgba(121, 198, 129, 1);
+  --semantic-success-base: rgba(121, 198, 129, 1);
 
-    --semantic-success-border: rgba(196, 239, 200, 1);
+  --semantic-success-border: rgba(196, 239, 200, 1);
 
-    --semantic-success-bg: rgba(236, 252, 238, 1);
+  --semantic-success-bg: rgba(236, 252, 238, 1);
 
-    --semantic-notification-label: rgba(18, 40, 58, 1);
+  --semantic-notification-label: rgba(18, 40, 58, 1);
 
-    --semantic-notification-base: rgba(0, 120, 217, 1);
+  --semantic-notification-base: rgba(0, 120, 217, 1);
 
-    --semantic-notification-border: rgba(169, 211, 245, 1);
+  --semantic-notification-border: rgba(169, 211, 245, 1);
 
-    --semantic-notification-bg: rgba(239, 248, 255, 1);
+  --semantic-notification-bg: rgba(239, 248, 255, 1);
 
+  /* Text-size styles */
+  --title-headline-regular: 44px;
+  --title-headline-bold: 44px;
+  --title-large-regular: 36px;
+  --title-large-bold: 36px;
+  --title-regular-regular: 24px;
+  --title-regular-bold: 24px;
+  --title-small-regular: 20px;
+  --title-small-bold: 20px;
+  --body-large-regular: 18px;
+  --body-large-bold: 18px;
+  --body-regular-regular: 16px;
+  --body-regular-bold: 16px;
+  --body-small-regular: 14px;
+  --body-small-bold: 14px;
+  --body-mini-regular: 12px;
+  --body-mini-bold: 12px;
 
-    /* Text-size styles */
-    --title-headline-regular: 44px;
-    --title-headline-bold: 44px;
-    --title-large-regular: 36px;
-    --title-large-bold: 36px;
-    --title-regular-regular: 24px;
-    --title-regular-bold: 24px;
-    --title-small-regular: 20px;
-    --title-small-bold: 20px;
-    --body-large-regular: 18px;
-    --body-large-bold: 18px;
-    --body-regular-regular: 16px;
-    --body-regular-bold: 16px;
-    --body-small-regular: 14px;
-    --body-small-bold: 14px;
-    --body-mini-regular: 12px;
-    --body-mini-bold: 12px;
-
-    /* Effect styles */
-    --shadow-low: 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.04);
-    --shadow-medium: 0px 4px 10px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.04);
-    --shadow-high: 0px 8px 32px rgba(0, 0, 0, 0.08), 0px 2px 20px rgba(0, 0, 0, 0.04);
-    --shadow-float: 0px 24px 60px rgba(0, 0, 0, 0.12), 0px 8px 20px rgba(0, 0, 0, 0.06);
-    --shadow-accent: 0px 0px 2px 2px rgba(255, 63, 31, 0.15);
-    ;
+  /* Effect styles */
+  --shadow-low: 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0px 4px 10px rgba(0, 0, 0, 0.08),
+    0px 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-high: 0px 8px 32px rgba(0, 0, 0, 0.08),
+    0px 2px 20px rgba(0, 0, 0, 0.04);
+  --shadow-float: 0px 24px 60px rgba(0, 0, 0, 0.12),
+    0px 8px 20px rgba(0, 0, 0, 0.06);
+  --shadow-accent: 0px 0px 2px 2px rgba(255, 63, 31, 0.15);
 }
 
 @keyframes overlayShow {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .demo {
-    box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.04);
-    filter: drop-shadow(0px 126px 50px rgba(0, 0, 0, 0.01)) drop-shadow(0px 71px 43px rgba(0, 0, 0, 0.02)) drop-shadow(0px 31px 31px rgba(0, 0, 0, 0.04)) drop-shadow(0px 8px 17px rgba(0, 0, 0, 0.04));
+  box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.04);
+  filter: drop-shadow(0px 126px 50px rgba(0, 0, 0, 0.01))
+    drop-shadow(0px 71px 43px rgba(0, 0, 0, 0.02))
+    drop-shadow(0px 31px 31px rgba(0, 0, 0, 0.04))
+    drop-shadow(0px 8px 17px rgba(0, 0, 0, 0.04));
 }
 
 .linear-text {
-    letter-spacing: 4px;
-    background: linear-gradient(90deg, #FF3F1F 0.45%, #FF981F 100.45%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #ff3f1f 0.45%, #ff981f 100.45%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .linear-text-border {
-    background: linear-gradient(white, white) padding-box,
-        linear-gradient(111.34deg, rgba(255, 63, 31, 0.6) 0%, rgba(255, 152, 31, 0.6) 100%) border-box;
-    border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(
+        111.34deg,
+        rgba(255, 63, 31, 0.6) 0%,
+        rgba(255, 152, 31, 0.6) 100%
+      )
+      border-box;
+  border: 1px solid transparent;
 }
