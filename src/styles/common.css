@@ -40,6 +40,7 @@ input::placeholder {
 
   /* Color styles */
   --bg-base: rgba(255, 255, 255, 1);
+  --bg-base-dark: rgba(25, 25, 25, 1);
   --bg-sub: rgba(251, 251, 251, 1);
   --bg-shade: rgba(243, 243, 243, 1);
   --bg-border: rgba(222, 222, 222, 1);
@@ -47,9 +48,11 @@ input::placeholder {
 
   --label-title: rgba(0, 0, 0, 1);
   --label-base: rgba(47, 47, 47, 1);
+  --label-base-dark: rgba(255, 255, 255, 1);
   --label-muted: rgba(117, 117, 117, 1);
   --label-faint: rgba(169, 169, 169, 1);
   --label-link: rgba(25, 100, 215, 1);
+  --label-link-hover: rgb(119, 168, 241);
 
   --accent-base: rgba(255, 63, 31, 1);
   --accent-bg: rgba(255, 198, 172, 1);

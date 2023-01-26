@@ -4,10 +4,9 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
-import TertiaryButton from '@/components/Buttons/TertiaryButton'
+import SecondaryButton from '@/components/Buttons/SecondaryButton'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
 
 function MobileNavLink({ href, children }) {
@@ -129,29 +128,27 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full">
       <nav className="relative z-50 flex h-16 w-full items-center justify-between border-b border-[var(--bg-border)] bg-[var(--bg-sub)] px-4 sm:px-6 md:px-8">
-        <Link
-          className="flex items-center gap-2 text-lg font-bold"
-          href="/"
-          aria-label="Home"
-        >
+        <Link className="flex items-center gap-2" href="/" aria-label="Home">
           <Logo className="h-6 w-6" />
-          <div>NotionComments</div>
+          <div className="text-lg font-bold text-[var(--label-title)]">
+            NotionComments
+          </div>
         </Link>
         <div className="hidden gap-4 md:flex">
-          <TertiaryButton
+          <SecondaryButton
             isIcon={false}
             size="big"
             text="Features"
             href="#features"
             className="font-bold text-[var(--label-base)]"
           />
-          <TertiaryButton
+          <SecondaryButton
             isIcon={false}
             size="big"
             text="Pricing"
             href="/pricing"
           />
-          <TertiaryButton
+          <SecondaryButton
             isIcon={false}
             size="big"
             text="Guides"

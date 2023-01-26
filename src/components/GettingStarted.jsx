@@ -101,7 +101,7 @@ export function GettingStarted({ feature, isActive, className, ...props }) {
     <div
       className={clsx(
         className,
-        'border-[var(--bg-border)]] border bg-[var(--bg-sub)]'
+        'border-[var(--bg-border)]] border-y bg-[var(--bg-sub)] py-20'
       )}
       {...props}
     >
