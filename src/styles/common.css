@@ -37,67 +37,45 @@ input::placeholder {
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-regular: 400;
+
   /* Color styles */
   --bg-base: rgba(255, 255, 255, 1);
-
   --bg-sub: rgba(251, 251, 251, 1);
-
   --bg-shade: rgba(243, 243, 243, 1);
-
   --bg-border: rgba(222, 222, 222, 1);
-
   --bg-border-strong: rgba(204, 204, 204, 1);
 
   --label-title: rgba(0, 0, 0, 1);
-
   --label-base: rgba(47, 47, 47, 1);
-
   --label-muted: rgba(117, 117, 117, 1);
-
   --label-faint: rgba(169, 169, 169, 1);
-
   --label-link: rgba(25, 100, 215, 1);
 
   --accent-base: rgba(255, 63, 31, 1);
-
   --accent-bg: rgba(255, 198, 172, 1);
-
   --accent-shade: rgb(235, 27, 0, 1);
-
   --accent-label: rgba(255, 255, 255, 1);
-
   --accent-muted: rgba(255, 255, 255, 1);
+  --accent-linear: linear-gradient(90deg, #ff3f1f 0%, #ff981f 100%);
 
   --semantic-danger-label: rgba(148, 11, 11, 1);
-
   --semantic-danger-base: rgba(210, 76, 76, 1);
-
   --semantic-danger-border: rgba(249, 178, 178, 1);
-
   --semantic-danger-bg: rgba(255, 238, 238, 1);
 
   --semantic-warning-label: rgba(95, 80, 36, 1);
-
   --semantic-warning-base: rgba(237, 207, 116, 1);
-
   --semantic-warning-border: rgba(245, 227, 172, 1);
-
   --semantic-warning-bg: rgba(255, 253, 245, 1);
 
   --semantic-success-label: rgba(51, 91, 55, 1);
-
   --semantic-success-base: rgba(121, 198, 129, 1);
-
   --semantic-success-border: rgba(196, 239, 200, 1);
-
   --semantic-success-bg: rgba(236, 252, 238, 1);
 
   --semantic-notification-label: rgba(18, 40, 58, 1);
-
   --semantic-notification-base: rgba(0, 120, 217, 1);
-
   --semantic-notification-border: rgba(169, 211, 245, 1);
-
   --semantic-notification-bg: rgba(239, 248, 255, 1);
 
   /* Text-size styles */
@@ -147,21 +125,14 @@ input::placeholder {
     drop-shadow(0px 8px 17px rgba(0, 0, 0, 0.04));
 }
 
-.linear-text {
-  letter-spacing: 4px;
-  background: linear-gradient(90deg, #ff3f1f 0.45%, #ff981f 100.45%);
+.accent-text {
+  background: var(--accent-linear);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-.linear-text-border {
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(
-        111.34deg,
-        rgba(255, 63, 31, 0.6) 0%,
-        rgba(255, 152, 31, 0.6) 100%
-      )
-      border-box;
+.accent-border {
+  background: linear-gradient(var(--bg-base), var(--bg-base)) padding-box,
+    var(--accent-linear) border-box;
   border: 1px solid transparent;
 }

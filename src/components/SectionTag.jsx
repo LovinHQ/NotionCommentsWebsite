@@ -1,12 +1,13 @@
-const SectionTag = ({text}) => {
-    return (
-        <div className="flex justify-center items-center ">
-            <div className="rounded-3xl px-6 py-2 bg-[var(--bg-base)] linear-text-border">
-            <span className="linear-text">{text}</span>
-
-            </div>
-        </div>
-    )
+const SectionTag = ({ text }) => {
+  return (
+    <div className="flex items-center justify-center">
+      <div className="accent-border flex h-10 items-center justify-center rounded-full px-6">
+        <span className="accent-text text-base font-bold tracking-[4px]">
+          {text}
+        </span>
+      </div>
+    </div>
+  )
 }
 
-export default SectionTag;
+export default SectionTag

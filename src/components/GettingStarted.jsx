@@ -96,10 +96,13 @@ const features = [
   },
 ]
 
-function Feature({ feature, isActive, className, ...props }) {
+export function GettingStarted({ feature, isActive, className, ...props }) {
   return (
     <div
-      className={clsx(className, 'bg-[var(--bg-sub)] border border-[var(--bg-border)]]')}
+      className={clsx(
+        className,
+        'border-[var(--bg-border)]] border bg-[var(--bg-sub)]'
+      )}
       {...props}
     >
       <div>Get started in just one minute</div>
@@ -111,9 +114,18 @@ function Feature({ feature, isActive, className, ...props }) {
         <div>3</div>
       </div>
       <div>
-        <Box title="Sign in with your Notion account" description="Create a account by giving us access to your Notion Workspace. We are going to use the email of your Notion as the registered email."/>
-        <Box title="Copy link and create embed" description="Go to your Notion and copy the page link. Click “Create am embed”  in NotionComments, paste the link and generate embed link."/>
-        <Box title="Paste embed in your Notion post" description="Copy the generated link, paste it in Notion and click “Create embed”. Adjust the size of comment embed and you’re done! "/>
+        <Box
+          title="Sign in with your Notion account"
+          description="Create a account by giving us access to your Notion Workspace. We are going to use the email of your Notion as the registered email."
+        />
+        <Box
+          title="Copy link and create embed"
+          description="Go to your Notion and copy the page link. Click “Create am embed”  in NotionComments, paste the link and generate embed link."
+        />
+        <Box
+          title="Paste embed in your Notion post"
+          description="Copy the generated link, paste it in Notion and click “Create embed”. Adjust the size of comment embed and you’re done! "
+        />
       </div>
       <div>
         <div></div>
@@ -126,9 +138,9 @@ function Feature({ feature, isActive, className, ...props }) {
   )
 }
 
-function Box({title, description}) {
+function Box({ title, description }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-4">
+    <div className="rounded-lg bg-white p-4 shadow-lg">
       <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       <p className="mt-2 text-sm text-gray-500">{description}</p>
     </div>

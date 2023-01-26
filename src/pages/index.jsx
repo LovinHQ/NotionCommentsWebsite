@@ -6,8 +6,8 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { SecondaryFeatures } from '@/components/SecondaryFeatures'
+import { Features } from '@/components/Features'
+import { GettingStarted } from '@/components/GettingStarted'
 import { Testimonials } from '@/components/Testimonials'
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       <Header />
       <main className="mt-32 md:mt-48">
         <Hero />
-        <PrimaryFeatures />
+        <Features />
         {/* <SecondaryFeatures /> */}
         <CallToAction />
         <Testimonials />
