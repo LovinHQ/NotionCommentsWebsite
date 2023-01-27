@@ -26,9 +26,9 @@ function HeroBackground() {
               .map((_, j) => (
                 <div key={j}>
                   {random(500).some(([x, y]) => x === i && y === j) ? (
-                    <div className="h-10 w-10 border-[0.25px] border-[var(--bg-border)] bg-[#F5F5F5] opacity-80" />
+                    <div className="h-6 w-6 border-[0.25px] border-[var(--bg-border)] bg-[#F5F5F5] opacity-80 sm:h-10 sm:w-10" />
                   ) : (
-                    <div className="h-10 w-10 border-[0.25px] border-[var(--bg-border)] opacity-80" />
+                    <div className="h-6 w-6 border-[0.25px] border-[var(--bg-border)] opacity-80 sm:h-10 sm:w-10" />
                   )}
                 </div>
               ))}
