@@ -14,7 +14,7 @@ export function Logo({ theme = 'light' }) {
       <path
         d="M24 0C28.9706 0 37.4558 0 42.7279 5.27208C48 10.5442 48 19.0294 48 24C48 28.9706 48 37.4558 42.7279 42.7279C37.4558 48 28.9706 48 24 48C19.0294 48 10.5442 48 5.27208 42.7279C0 37.4558 0 28.9706 0 24H0C0 19.0294 0 10.5442 5.27208 5.27208C10.5442 0 19.0294 0 24 0V0Z"
         fill="url(#paint0_linear_378_4278)"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <path
         fill-rule="evenodd"
@@ -31,8 +31,8 @@ export function Logo({ theme = 'light' }) {
           y2="48"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
@@ -51,7 +51,7 @@ export function Logo({ theme = 'light' }) {
       <path
         d="M24 0C28.9706 0 37.4558 0 42.7279 5.27208C48 10.5442 48 19.0294 48 24C48 28.9706 48 37.4558 42.7279 42.7279C37.4558 48 28.9706 48 24 48C19.0294 48 10.5442 48 5.27208 42.7279C0 37.4558 0 28.9706 0 24H0C0 19.0294 0 10.5442 5.27208 5.27208C10.5442 0 19.0294 0 24 0V0Z"
         fill="url(#paint0_linear_378_4278)"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <path
         fill-rule="evenodd"

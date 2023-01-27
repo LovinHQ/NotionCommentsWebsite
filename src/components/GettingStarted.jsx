@@ -87,14 +87,14 @@ export function GettingStarted({ feature, isActive, className, ...props }) {
               }}
               className="accent-border group z-10 flex h-16 w-full gap-4 rounded-3xl bg-[var(--bg-base)] p-3 transition duration-300 ease-out hover:bg-gradient-to-br hover:from-[var(--accent-base)] hover:to-[var(--secondary-base)]"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--bg-border)] transition duration-300 ease-out group-hover:bg-[var(--bg-base)] ">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--accent-base)] to-[var(--secondary-base)] transition duration-300 ease-out group-hover:bg-[var(--bg-base)] group-hover:from-transparent group-hover:to-transparent">
                 <PlayIcon className="h-6 w-6 text-[var(--accent-label)] transition duration-300 ease-out group-hover:text-[var(--accent-base)]" />
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex text-start text-base font-bold leading-none text-[var(--label-base)] transition duration-300 ease-out group-hover:text-[var(--accent-label)]">
                   Prefer videos?
                 </div>
-                <div className="mt-2 flex text-start text-sm font-normal leading-none text-[var(--label-base)] transition duration-300 ease-out group-hover:text-[var(--accent-label)]">
+                <div className="mt-2 flex text-start text-sm font-normal leading-none text-[var(--label-muted)] transition duration-300 ease-out group-hover:text-[var(--accent-label)]">
                   Check this tweet on how it works!
                 </div>
               </div>
