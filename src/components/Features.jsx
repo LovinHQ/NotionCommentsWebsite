@@ -76,8 +76,8 @@ const Feature = ({ icon, title, description, image, position }) => {
 
 export function Features() {
   return (
-    <Container id="features" aria-label="Features" className="gap-20">
-      <div className="flex flex-col justify-center">
+    <Container id="features" aria-label="Features" className="-mt-32 gap-20">
+      <div className="mt-32 flex flex-col justify-center">
         <SectionTag text="FEATURES" />
         <h1 className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
           Engage with your audience

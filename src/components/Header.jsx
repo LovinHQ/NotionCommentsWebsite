@@ -138,20 +138,25 @@ export function Header() {
             isIcon={false}
             size="big"
             text="Features"
-            href="#features"
-            className="font-bold text-[var(--label-base)]"
+            onClick={() => {
+              window.location.hash = 'features'
+            }}
           />
           <SecondaryButton
             isIcon={false}
             size="big"
             text="Pricing"
-            href="/pricing"
+            onClick={() => {
+              window.open('/pricing', '_self')
+            }}
           />
           <SecondaryButton
             isIcon={false}
             size="big"
             text="Guides"
-            href="/guides"
+            onClick={() => {
+              window.open('/guides', '_self')
+            }}
           />
         </div>
         <div>
