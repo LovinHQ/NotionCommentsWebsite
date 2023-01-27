@@ -1,8 +1,8 @@
-import { Container } from './Container'
+import { Container } from '../Container'
 import Image from 'next/image'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 
-export function Demo({}) {
+export function Demo() {
   return (
     <Container>
       <div className="flex-1 overflow-hidden rounded-3xl bg-[var(--bg-sub)] shadow-xl">

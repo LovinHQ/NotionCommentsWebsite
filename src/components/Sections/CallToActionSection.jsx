@@ -2,7 +2,7 @@ import Image from 'next/image'
 import PrimaryCTAButton from '@/components/Buttons/PrimaryCTAButton'
 import { Container } from '@/components/Container'
 import FooterBackground from '@/images/resources/footer.svg'
-import { Logo } from './Logo'
+import { Logo } from '../Logo'
 
 function CTABackground() {
   const random = (n) => {

@@ -8,7 +8,7 @@ import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
-import SectionTag from './SectionTag'
+import SectionTag from '../SectionTag'
 import clsx from 'clsx'
 
 const features = [
@@ -80,7 +80,7 @@ export function Features() {
       <div className="mt-32 flex flex-col justify-center">
         <SectionTag text="FEATURES" />
         <h1 className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
-          Engage with your audience
+          Engage with Your Audience
         </h1>
         <h3 className="m-auto flex max-w-4xl justify-center text-center text-lg font-normal leading-normal text-[var(--label-muted)]">
           NotionComments is the easiest way to add a comment section to a Notion

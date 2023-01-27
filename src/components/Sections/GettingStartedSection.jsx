@@ -29,7 +29,7 @@ export function GettingStarted({ feature, isActive, className, ...props }) {
     >
       <Container>
         <div className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
-          Get started in just one minute
+          Get Started in Just One Minute
         </div>
         <div className="mt-20 flex flex-col items-start gap-y-8 md:flex-row">
           <div className="flex flex-1 flex-col items-center gap-6">

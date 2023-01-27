@@ -1,8 +1,8 @@
 import { Container } from '@/components/Container'
-import PrimaryCTAButton from './Buttons/PrimaryCTAButton'
-import SecondaryCTAButton from './Buttons/SecondaryCTAButton'
+import PrimaryCTAButton from '../Buttons/PrimaryCTAButton'
+import SecondaryCTAButton from '../Buttons/SecondaryCTAButton'
 
-function HeroBackground() {
+export function HeroBackground() {
   // 以(x, y) x<=14, y<=200的方式随机生成n个元组
   const random = (n) => {
     const arr = []

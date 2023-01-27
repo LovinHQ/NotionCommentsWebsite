@@ -60,7 +60,6 @@ input::placeholder {
   --accent-shade: rgb(235, 27, 0, 1);
   --accent-label: rgba(255, 255, 255, 1);
   --accent-muted: rgba(255, 255, 255, 1);
-  --accent-linear: linear-gradient(90deg, #ff3f1f 0%, #ff981f 100%);
 
   --secondary-base: #ff981f 100%;
 
@@ -83,6 +82,9 @@ input::placeholder {
   --semantic-notification-base: rgba(0, 120, 217, 1);
   --semantic-notification-border: rgba(169, 211, 245, 1);
   --semantic-notification-bg: rgba(239, 248, 255, 1);
+
+  --accent-linear: linear-gradient(90deg, #ff3f1f 0%, #ff981f 100%);
+  --neutral-linear: linear-gradient(0deg, #dedede00 0%, #dedede 100%);
 
   /* Text-size styles */
   --title-headline-regular: 44px;
@@ -140,6 +142,12 @@ input::placeholder {
 .accent-border {
   background: linear-gradient(var(--bg-base), var(--bg-base)) padding-box,
     var(--accent-linear) border-box;
+  border: 1px solid transparent;
+}
+
+.neutral-border {
+  background: linear-gradient(var(--bg-base), var(--bg-base)) padding-box,
+    var(--neutral-linear) border-box;
   border: 1px solid transparent;
 }
 

@@ -139,7 +139,11 @@ export function Header() {
             size="big"
             text="Features"
             onClick={() => {
-              window.location.hash = 'features'
+              if (window.location.pathname === '/') {
+                window.location.hash = 'features'
+              } else {
+                window.open('/#features', '_self')
+              }
             }}
           />
           <SecondaryButton
