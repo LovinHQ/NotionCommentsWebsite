@@ -43,7 +43,7 @@ export function Hero() {
     <>
       <HeroBackground />
       <Container className="z-10 flex w-screen flex-col">
-        <h1 className="max-w-[720px] text-5xl font-bold leading-tight tracking-tighter text-[var(--label-title)] sm:text-7xl">
+        <h1 className="max-w-[720px] text-5xl font-bold leading-tight tracking-tight text-[var(--label-title)] sm:text-7xl">
           Comment made easy for your Notion post
         </h1>
         <p className="mt-8 max-w-[720px] text-2xl text-[var(--label-muted)]">

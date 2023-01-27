@@ -33,7 +33,7 @@ const SecondaryButton = ({
               ? 'px-2'
               : 'px-2'
           }
-          group relative flex select-none items-center justify-center gap-1 font-semibold text-[var(--label-base)] outline-none
+          group relative flex select-none items-center justify-center gap-1 font-medium text-[var(--label-base)] outline-none
           transition duration-150 ease-out hover:cursor-pointer 
           hover:bg-[var(--bg-shade)] hover:text-[var(--label-title)]
           focus:ring-2 focus:ring-[var(--label-base)] focus:ring-offset-2 focus:ring-offset-[var(--bg-base)] 
@@ -45,7 +45,7 @@ const SecondaryButton = ({
       {children}
       {text && (
         <span
-          className={`font-semibold text-[var(--label-base)] transition duration-150 ease-out group-hover:text-[var(--label-title)] group-disabled:text-[var(--label-faint)]`}
+          className={`font-medium text-[var(--label-base)] transition duration-150 ease-out group-hover:text-[var(--label-title)] group-disabled:text-[var(--label-faint)]`}
         >
           {text}
         </span>

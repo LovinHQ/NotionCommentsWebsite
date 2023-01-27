@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import PrimaryButton from './Buttons/PrimaryButton'
 
 function SwirlyDoodle({ className }) {
   return (
@@ -80,7 +80,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
           </li>
         ))}
       </ul>
-      <Button
+      <PrimaryButton
         href={href}
         variant={featured ? 'solid' : 'outline'}
         color="white"
@@ -88,7 +88,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
         Get started
-      </Button>
+      </PrimaryButton>
     </section>
   )
 }
