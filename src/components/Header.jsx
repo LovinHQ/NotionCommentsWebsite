@@ -80,7 +80,7 @@ function MobileNavigation() {
   return (
     <Popover>
       <Popover.Button
-        className="relative z-50 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+        className="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}
@@ -126,7 +126,7 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="fixed top-0 w-full">
+    <header className="fixed top-0 z-20 w-full">
       <nav className="relative z-50 flex h-16 w-full items-center justify-between border-b border-[var(--bg-border)] bg-[var(--bg-sub)] px-4 sm:px-6 md:px-8">
         <Link className="flex items-center gap-2" href="/" aria-label="Home">
           <Logo className="h-6 w-6" />

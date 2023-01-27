@@ -2,52 +2,91 @@ import { Container } from '@/components/Container'
 import PrimaryCTAButton from './Buttons/PrimaryCTAButton'
 import SecondaryCTAButton from './Buttons/SecondaryCTAButton'
 
+function HeroBackground() {
+  // 以(x, y) x<=14, y<=200的方式随机生成n个元组
+  const random = (n) => {
+    const arr = []
+    for (let i = 0; i < n; i++) {
+      arr.push([
+        Math.floor(Math.random() * 14),
+        Math.floor(Math.random() * 200),
+      ])
+    }
+    return arr
+  }
+
+  return (
+    <div className="gradient-opacity-top-bottom absolute top-0 mt-16 w-screen overflow-hidden">
+      {Array(14)
+        .fill()
+        .map((_, i) => (
+          <div className="flex" key={i}>
+            {Array(200)
+              .fill()
+              .map((_, j) => (
+                <div key={j}>
+                  {random(500).some(([x, y]) => x === i && y === j) ? (
+                    <div className="h-10 w-10 border-[0.25px] border-[var(--bg-border)] bg-[#F5F5F5] opacity-80" />
+                  ) : (
+                    <div className="h-10 w-10 border-[0.25px] border-[var(--bg-border)] opacity-80" />
+                  )}
+                </div>
+              ))}
+          </div>
+        ))}
+    </div>
+  )
+}
+
 export function Hero() {
   return (
-    <Container className="flex w-screen flex-col">
-      <h1 className="max-w-[720px] text-5xl font-bold leading-tight tracking-tighter text-[var(--label-title)] sm:text-7xl">
-        Comment made easy for your Notion post
-      </h1>
-      <p className="mt-8 max-w-[720px] text-2xl text-[var(--label-muted)]">
-        Create a comment embed in your Notion page that everyone can use. It
-        takes one minute to set up, and it’s free!
-      </p>
-      <div className="mt-16 flex flex-col gap-6 sm:flex-row">
-        <PrimaryCTAButton text="Get started for free" isIcon={false} />
-        <SecondaryCTAButton text="Try a demo" isIcon={false} />
-      </div>
-      <div className="gap mt-16 flex max-w-lg flex-col gap-4">
-        <div className="flex -space-x-3">
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-          <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
-            {/* <Image src="/images/hero/1.png" fill alt="" /> */}
-          </div>
-        </div>
-        <p className="font-display text-base font-normal leading-normal text-[var(--label-muted)]">
-          Join{' '}
-          <span className="font-medium text-[var(--label-base)]">
-            100+ content creators and bloggers
-          </span>{' '}
-          who use NotionComments to engage with their audience.
+    <>
+      <HeroBackground />
+      <Container className="z-10 flex w-screen flex-col">
+        <h1 className="max-w-[720px] text-5xl font-bold leading-tight tracking-tighter text-[var(--label-title)] sm:text-7xl">
+          Comment made easy for your Notion post
+        </h1>
+        <p className="mt-8 max-w-[720px] text-2xl text-[var(--label-muted)]">
+          Create a comment embed in your Notion page that everyone can use. It
+          takes one minute to set up, and it’s free!
         </p>
-      </div>
-    </Container>
+        <div className="mt-16 flex flex-col gap-6 sm:flex-row">
+          <PrimaryCTAButton text="Get started for free" isIcon={false} />
+          <SecondaryCTAButton text="Try a demo" isIcon={false} />
+        </div>
+        <div className="gap mt-16 flex max-w-lg flex-col gap-4">
+          <div className="flex -space-x-3">
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+            <div className="h-10 w-10 rounded-full border-2 border-[var(--bg-base)] bg-[var(--bg-shade)] shadow-sm">
+              {/* <Image src="/images/hero/1.png" fill alt="" /> */}
+            </div>
+          </div>
+          <p className="font-display text-base font-normal leading-normal text-[var(--label-muted)]">
+            Join{' '}
+            <span className="font-medium text-[var(--label-base)]">
+              100+ content creators and bloggers
+            </span>{' '}
+            who use NotionComments to engage with their audience.
+          </p>
+        </div>
+      </Container>
+    </>
   )
 }
