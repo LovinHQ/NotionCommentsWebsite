@@ -17,7 +17,7 @@ export function PricingSection() {
       <Container
         id="pricing"
         aria-label="Pricing"
-        className="z-10 -mt-32 gap-20"
+        className="z-10 -mt-32 items-center gap-20"
       >
         <div className="mt-32 flex flex-col justify-center">
           <SectionTag text="PRICING" />
@@ -30,7 +30,7 @@ export function PricingSection() {
             features.
           </h3>
         </div>
-        <div className="msm:gap-8 flex max-w-3xl flex-col gap-6 sm:flex-row">
+        <div className="flex max-w-3xl flex-col gap-6 sm:flex-row sm:gap-8">
           <div className="neutral-border flex w-full flex-col gap-12 rounded-3xl px-8 pt-8 pb-12">
             <h3 className="font-display text-xl font-bold leading-normal tracking-widest text-[var(--label-title)]">
               FREE
