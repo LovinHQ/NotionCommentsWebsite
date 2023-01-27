@@ -15,7 +15,13 @@ export function CallToAction() {
           <h2 className="w-full text-center text-3xl font-bold text-[var(--label-title)] sm:text-4xl">
             Boost engagement with your audience today
           </h2>
-          <PrimaryCTAButton isIcon={false} text="Get started for free" />
+          <PrimaryCTAButton
+            isIcon={false}
+            text="Get started for free"
+            onClick={() => {
+              window.open('https://app.notioncomments.com')
+            }}
+          />
         </div>
       </Container>
       <FooterBackground className="relative -mt-48 flex h-48 w-full text-[var(--bg-base-dark)]" />

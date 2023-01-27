@@ -65,7 +65,7 @@ const Feature = ({ icon, title, description, image, position }) => {
           <h2 className="text-3xl font-bold leading-tight text-[var(--label-title)]">
             {title}
           </h2>
-          <h3 className="flex text-left text-lg font-medium leading-normal text-[var(--label-muted)]">
+          <h3 className="flex text-left text-lg font-normal leading-normal text-[var(--label-muted)]">
             {description}
           </h3>
         </div>
@@ -82,7 +82,7 @@ export function Features() {
         <h1 className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
           Engage with your audience
         </h1>
-        <h3 className="m-auto flex max-w-4xl justify-center text-center text-lg font-medium leading-normal text-[var(--label-muted)]">
+        <h3 className="m-auto flex max-w-4xl justify-center text-center text-lg font-normal leading-normal text-[var(--label-muted)]">
           NotionComments is the easiest way to add a comment section to a Notion
           post. It helps content creators and bloggers who use Notion to
           establish a better connection with their readers.

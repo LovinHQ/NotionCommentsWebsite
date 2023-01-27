@@ -51,7 +51,13 @@ export function Hero() {
           takes one minute to set up, and it’s free!
         </p>
         <div className="mt-16 flex flex-col gap-6 sm:flex-row">
-          <PrimaryCTAButton text="Get started for free" isIcon={false} />
+          <PrimaryCTAButton
+            text="Get started for free"
+            isIcon={false}
+            onClick={() => {
+              window.open('https://app.notioncomments.com')
+            }}
+          />
           <SecondaryCTAButton text="Try a demo" isIcon={false} />
         </div>
         <div className="gap mt-16 flex max-w-lg flex-col gap-4">
@@ -80,7 +86,7 @@ export function Hero() {
           </div>
           <p className="font-display text-base font-normal leading-normal text-[var(--label-muted)]">
             Join{' '}
-            <span className="font-medium text-[var(--label-base)]">
+            <span className="font-semibold text-[var(--label-base)]">
               100+ content creators and bloggers
             </span>{' '}
             who use NotionComments to engage with their audience.

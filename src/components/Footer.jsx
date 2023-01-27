@@ -10,7 +10,7 @@ function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="inline-block py-2 text-base font-medium text-[var(--label-muted)] transition duration-150 ease-out hover:text-[var(--label-base-dark)] md:px-4"
+      className="inline-block py-2 text-base font-semibold text-[var(--label-muted)] transition duration-150 ease-out hover:text-[var(--label-base-dark)] md:px-4"
     >
       {children}
     </Link>
@@ -40,7 +40,7 @@ export function Footer() {
                 window.open('https://twitter.com/NotionComments')
               }}
               className={` group relative flex h-10 select-none items-center justify-center gap-1.5 rounded-xl border border-[#363636] bg-[#212121] pl-2 pr-3 text-base
-                  font-medium text-[var(--label-muted)] outline-none transition 
+                  font-semibold text-[var(--label-muted)] outline-none transition 
                   duration-150 ease-out hover:cursor-pointer
                   hover:border-[#4E4E4E] hover:bg-[#2B2B2B] hover:text-[var(--label-base-dark)]
                   focus:ring-2 focus:ring-[var(--label-base-dark)] focus:ring-offset-2 focus:ring-offset-[var(--bg-base-dark)] 
@@ -49,7 +49,7 @@ export function Footer() {
             >
               <TwitterIcon className="h-6 w-6" />
               <span
-                className={`font-medium text-[var(--label-muted)] transition duration-150 ease-out group-hover:text-[var(--label-base-dark)] group-disabled:text-[var(--label-faint)]`}
+                className={`font-semibold text-[var(--label-muted)] transition duration-150 ease-out group-hover:text-[var(--label-base-dark)] group-disabled:text-[var(--label-faint)]`}
               >
                 Follow us on Twitter
               </span>
