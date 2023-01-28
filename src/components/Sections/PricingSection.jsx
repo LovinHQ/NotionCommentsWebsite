@@ -89,7 +89,7 @@ export function PricingSection() {
                 type="single"
                 defaultValue="monthly"
                 aria-label="Pro subscription cycle"
-                className="mx-1 flex h-6 items-center rounded-full bg-[var(--bg-shade)]"
+                className="mx-1 flex h-6 select-none items-center rounded-full bg-[var(--bg-shade)]"
               >
                 <ToggleGroup.Item
                   className="flex h-5 w-20 items-center justify-center rounded-full px-4 text-xs transition duration-150 ease-out radix-state-off:bg-transparent radix-state-off:font-normal radix-state-off:text-[var(--label-muted)] radix-state-on:bg-[var(--accent-base)] radix-state-on:font-semibold radix-state-on:text-[var(--accent-label)]"
