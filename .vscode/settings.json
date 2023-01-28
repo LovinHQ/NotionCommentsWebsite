@@ -1,0 +1,17 @@
+{
+  "database-client.complectionTriggerKey": [" ", ",", ".", ">", "<", "=", "("],
+  "vsicons.associations.files": [],
+  "typescript.tsserver.watchOptions": {},
+  "react-native.android.logCatArguments": [
+    "*:S",
+    "ReactNative:V",
+    "ReactNativeJS:V"
+  ],
+  "tailwindCSS.experimental.classRegex": [],
+  "VSCodeCounter.languages": {},
+  "plantuml.jarArgs": [],
+  "cSpell.languageSettings": [],
+  "eslint.codeActionsOnSave.rules": null,
+  "json.schemas": [],
+  "importSorter.generalConfiguration.sortOnBeforeSave": true
+}

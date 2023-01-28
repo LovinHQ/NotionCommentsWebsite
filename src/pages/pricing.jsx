@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Faqs } from '@/components/Sections/FaqSection'
+import { Faq } from '@/components/Sections/FaqSection'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { PricingSection } from '@/components/Sections/PricingSection'
@@ -14,7 +14,7 @@ export default function Pricing() {
       <Header />
       <main className="mt-32 flex flex-col gap-32 md:mt-48">
         <PricingSection />
-        <Faqs />
+        <Faq />
       </main>
       <Footer />
     </>

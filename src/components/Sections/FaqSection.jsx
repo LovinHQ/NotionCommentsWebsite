@@ -1,110 +1,144 @@
 import Image from 'next/image'
-
+import * as Collapsible from '@radix-ui/react-collapsible'
+import ChevronDownIcon from '@/images/icons/chevronDown.svg'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
 
 const faqs = [
-  [
-    {
-      question: 'Does TaxPal handle VAT?',
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
-    },
-    {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
-    },
-    {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
-    },
-  ],
-  [
-    {
-      question: 'What was that testimonial about tax fraud all about?',
-      answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
-    },
-    {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    },
-  ],
-  [
-    {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-    },
-    {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-    },
-  ],
+  {
+    section: 'Account',
+    questions: [
+      {
+        question:
+          'Do I need to create an account for NotionComments if I already have a Notion account?',
+        answer:
+          'Yes, but kind of no. NotionComments does not share the same account system with Notion(since we’re two different teams), but we made the onboarding process relatively simple, so that you can sign up with a Notion account, and we automatically use your Notion account’s email to create a NotionComments account.',
+      },
+      {
+        question: 'What pages should I give NotionComments access of?',
+        answer:
+          'Only the ones you need to add embed in. We suggest creating embeds with the link of the Notion page you’re going paste the embed in. So we only need access to the pages you already want to show the public.',
+      },
+    ],
+  },
+  {
+    section: 'Comment embed',
+    questions: [
+      {
+        question: 'How many comment embeds can I create with the Free plan?',
+        answer:
+          '20. We provide a Free plan with 20 embeds for new content creators to get started. For professional creators who need more embeds and advanced features, you can turn to our Pro plan',
+      },
+      {
+        question: 'How many times can people comment in my embed?',
+        answer:
+          'Infinite! We support unlimited responses for each embed to give you and your audience the best opportunity to know each other.',
+      },
+      {
+        question:
+          'Can I paste the embed in another Notion page instead of the original one which I copied link from?',
+        answer:
+          'Yes of course. But the comments from that embed will only be shown and managed in the original Notion page. We’d recommend creating the embed in the Notion page where you copied link from for consistency reasons. Surely you can innovate how you’d like to use the integration!',
+      },
+    ],
+  },
+  {
+    section: 'Comment management',
+    questions: [
+      {
+        question:
+          'Can I hide the comment section at the top of my Notion page?',
+        answer:
+          'Yes! Notion provides the ability to customize the page style. You can go to the top right corner, open three-dots menu, and turn off the Top-level page discussions visibility. ',
+      },
+      {
+        question:
+          'How can I delete a comment I don’t like in the comment embed?',
+        answer:
+          'In the top-level comment section of your Notion page, you can manage all the comments from your readers. You can delete them here. To do this, you need to expand the top-level comment section first.',
+      },
+      {
+        question: 'What happens if I resolve a comment thread in Notion?',
+        answer:
+          'In that case, we won’t be able to retrieve the comments data of that thread, and you won’t see them in the embed. But you can always re-open it and see them again.',
+      },
+    ],
+  },
+  {
+    section: 'Privacy',
+    questions: [
+      {
+        question: 'What data do you collect?',
+        answer:
+          'Your Notion portrait, name and email. We also need access to reading and writing your comments and page content, but we don’t store any of your data. It’s all in your Notion database.',
+      },
+      {
+        question: 'Does NotionComments store or see my Notion page content?',
+        answer:
+          'No. We only require access to the comments of your Notion workspace. We won’t see any  content in your Notion.',
+      },
+    ],
+  },
+  {
+    section: 'Pricing',
+    questions: [
+      {
+        question: 'Is NotionComments going to be free?',
+        answer:
+          'Yes. We’re going to keep the Free plan free forever. We want to help creators get started with NotionComments, and we want to make sure that we’re providing the best value for creators who want to use NotionComments for their work.',
+      },
+      {
+        question: 'What’s the difference between the Free and Pro plan?',
+        answer:
+          'The Free plan is for new creators who want to get started with NotionComments. It provides 20 embeds, and you can upgrade to the Pro plan at any time. The Pro plan is for professional creators who need more embeds and advanced features. It provides unlimited embeds, and you can downgrade to the Free plan at any time.',
+      },
+    ],
+  },
 ]
 
-export function Faqs() {
+export function Faq() {
   return (
-    <section
-      id="faq"
-      aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
-    >
-      <Image
-        className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
-        src={backgroundImage}
-        alt=""
-        width={1558}
-        height={946}
-        unoptimized
-      />
-      <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2
-            id="faq-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
-          >
-            Frequently asked questions
-          </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
-          </p>
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
+    <div className="border-y border-[var(--bg-border)] bg-[var(--bg-sub)] py-20">
+      <Container id="faq" aria-labelledby="faq" className="gap-16">
+        <h1
+          id="faq-title"
+          className="flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl"
         >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-8">
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="font-display text-lg leading-7 text-slate-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+          Frequently Asked Questions
+        </h1>
+        {faqs.map((faq, faqIndex) => (
+          <div key={faqIndex} className="flex flex-col gap-8">
+            <h2 className="text-2xl font-bold text-[var(--label-base)]">
+              {faq.section}
+            </h2>
+            <ul role="list" className="flex flex-col gap-2">
+              {faq.questions.map((question, questionIndex) => {
+                return (
+                  <li
+                    key={questionIndex}
+                    className="border-b border-[var(--bg-border)] last:border-transparent"
+                  >
+                    <Collapsible.Root className="group flex flex-col items-start gap-2">
+                      <Collapsible.Trigger className="flex w-full items-start justify-between gap-4 py-4">
+                        <h3 className="flex max-w-2xl text-start text-lg font-semibold leading-7 text-[var(--label-base)]">
+                          {question.question}
+                        </h3>
+                        <div className="flex h-7 w-7 items-center justify-center">
+                          <ChevronDownIcon className="h-6 w-6 text-[var(--label-muted)] transition duration-300 ease-out group-radix-state-open:rotate-180" />
+                        </div>
+                      </Collapsible.Trigger>
+                      <Collapsible.Content className="collapsible-animation overflow-hidden ">
+                        <p className="max-w-2xl pb-6 text-base leading-normal text-[var(--label-muted)]">
+                          {question.answer}
+                        </p>
+                      </Collapsible.Content>
+                    </Collapsible.Root>
                   </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+                )
+              })}
+            </ul>
+          </div>
+        ))}
       </Container>
-    </section>
+    </div>
   )
 }

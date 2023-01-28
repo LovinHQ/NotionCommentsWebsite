@@ -5,3 +5,7 @@
 #__next {
   min-height: 100%;
 }
+
+.h-radix-collapsible {
+  height: var(--radix-collapsible-content-height);
+}
