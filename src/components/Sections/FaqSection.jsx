@@ -101,7 +101,7 @@ export function Faq() {
       <Container id="faq" aria-labelledby="faq" className="gap-16">
         <h1
           id="faq-title"
-          className="flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl"
+          className="flex justify-center text-center text-3xl font-bold leading-tight text-[var(--label-title)] sm:text-4xl md:text-5xl"
         >
           Frequently Asked Questions
         </h1>

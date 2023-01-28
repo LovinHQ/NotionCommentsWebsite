@@ -18,7 +18,7 @@ export default function Pricing() {
         <PricingSection />
         <Faq />
         <div className="gap flex flex-col items-center justify-center gap-10 pb-32">
-          <h1 className="flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
+          <h1 className="flex justify-center text-center text-3xl font-bold leading-tight text-[var(--label-title)] sm:text-4xl md:text-5xl">
             Ready to connect with your audience?
           </h1>
           <PrimaryCTAButton

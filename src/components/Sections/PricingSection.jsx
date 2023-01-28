@@ -21,7 +21,7 @@ export function PricingSection() {
       >
         <div className="mt-32 flex flex-col justify-center">
           <SectionTag text="PRICING" />
-          <h1 className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
+          <h1 className="my-4 flex justify-center text-center text-3xl font-bold leading-tight text-[var(--label-title)] sm:text-4xl md:text-5xl">
             Affordable Pricing for Starting Creators
           </h1>
           <h3 className="m-auto flex max-w-3xl justify-center text-center text-lg font-normal leading-normal text-[var(--label-muted)]">

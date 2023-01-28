@@ -28,7 +28,7 @@ export function GettingStarted({ feature, isActive, className, ...props }) {
       {...props}
     >
       <Container>
-        <div className="my-4 flex justify-center text-center text-4xl font-bold leading-tight text-[var(--label-title)] md:text-5xl">
+        <div className="my-4 flex justify-center text-center text-3xl font-bold leading-tight text-[var(--label-title)] sm:text-4xl md:text-5xl">
           Get Started in Just One Minute
         </div>
         <div className="mt-20 flex flex-col items-start gap-y-8 md:flex-row">

@@ -47,7 +47,7 @@ export function CallToAction() {
           <div className="z-10 h-12 origin-top scale-[200%]">
             <Logo />
           </div>
-          <h2 className="z-10 w-full px-4 text-center text-3xl font-bold text-[var(--label-title)] sm:text-4xl">
+          <h2 className="z-10 w-full px-4 text-center text-2xl font-bold text-[var(--label-title)] sm:text-3xl sm:text-4xl">
             Boost engagement with your audience today
           </h2>
           <PrimaryCTAButton
