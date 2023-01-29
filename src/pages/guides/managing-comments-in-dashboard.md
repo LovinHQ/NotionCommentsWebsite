@@ -1,5 +1,5 @@
 ---
-title: How to contribute
+title: Managing comments in Dashboard
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: CacheAdvance.flush()
+title: Terms of usage
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

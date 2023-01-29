@@ -1,5 +1,5 @@
 ---
-title: CacheAdvance.predict()
+title: Installing on Notion pages
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

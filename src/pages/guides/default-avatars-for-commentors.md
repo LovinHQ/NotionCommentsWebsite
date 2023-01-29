@@ -1,5 +1,5 @@
 ---
-title: CacheAdvance.revert()
+title: Default avatars for commentors
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

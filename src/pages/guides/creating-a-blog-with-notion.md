@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Creating a blog with Notion
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

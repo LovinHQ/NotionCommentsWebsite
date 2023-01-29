@@ -1,5 +1,5 @@
 ---
-title: Architecture guide
+title: Installing on any web page using embed code
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

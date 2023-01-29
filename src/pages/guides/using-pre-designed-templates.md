@@ -1,5 +1,5 @@
 ---
-title: Understanding caching
+title: Using pre-designed templates
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

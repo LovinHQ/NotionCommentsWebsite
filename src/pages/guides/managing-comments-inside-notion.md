@@ -1,5 +1,5 @@
 ---
-title: Neuralink integration
+title: Managing comments inside Notion
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

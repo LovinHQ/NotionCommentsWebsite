@@ -1,5 +1,5 @@
 ---
-title: Writing plugins
+title: Languages and fonts
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

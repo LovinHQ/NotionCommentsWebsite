@@ -1,5 +1,5 @@
 ---
-title: The butterfly effect
+title: Theme colors
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 

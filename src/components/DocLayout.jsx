@@ -7,63 +7,7 @@ import { Logo } from '@/components/Logo'
 import { Navigation } from '@/components/Navigation'
 import { Header } from '@/components/Header'
 import { Prose } from '@/components/Prose'
-
-const navigation = [
-  {
-    title: 'Introduction',
-    links: [
-      { title: 'Getting started', href: '/guides' },
-      { title: 'Installation', href: '/guides/installation' },
-    ],
-  },
-  {
-    title: 'Core concepts',
-    links: [
-      { title: 'Understanding caching', href: '/guides/understanding-caching' },
-      {
-        title: 'Predicting user behavior',
-        href: '/guides/predicting-user-behavior',
-      },
-      { title: 'Basics of time-travel', href: '/guides/basics-of-time-travel' },
-      {
-        title: 'Introduction to string theory',
-        href: '/guides/introduction-to-string-theory',
-      },
-      { title: 'The butterfly effect', href: '/guides/the-butterfly-effect' },
-    ],
-  },
-  {
-    title: 'Advanced guides',
-    links: [
-      { title: 'Writing plugins', href: '/guides/writing-plugins' },
-      { title: 'Neuralink integration', href: '/guides/neuralink-integration' },
-      { title: 'Temporal paradoxes', href: '/guides/temporal-paradoxes' },
-      { title: 'Testing', href: '/guides/testing' },
-      { title: 'Compile-time caching', href: '/guides/compile-time-caching' },
-      {
-        title: 'Predictive data generation',
-        href: '/guides/predictive-data-generation',
-      },
-    ],
-  },
-  {
-    title: 'API reference',
-    links: [
-      { title: 'CacheAdvance.predict()', href: '/guides/cacheadvance-predict' },
-      { title: 'CacheAdvance.flush()', href: '/guides/cacheadvance-flush' },
-      { title: 'CacheAdvance.revert()', href: '/guides/cacheadvance-revert' },
-      { title: 'CacheAdvance.regret()', href: '/guides/cacheadvance-regret' },
-    ],
-  },
-  {
-    title: 'Contributing',
-    links: [
-      { title: 'How to contribute', href: '/guides/how-to-contribute' },
-      { title: 'Architecture guide', href: '/guides/architecture-guide' },
-      { title: 'Design principles', href: '/guides/design-principles' },
-    ],
-  },
-]
+import { navigation } from '@/utils/constants'
 
 function useTableOfContents(tableOfContents) {
   let [currentSection, setCurrentSection] = useState(tableOfContents[0]?.id)

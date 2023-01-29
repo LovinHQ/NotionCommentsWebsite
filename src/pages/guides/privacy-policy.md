@@ -1,5 +1,5 @@
 ---
-title: Testing
+title: Privacy policy
 description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
