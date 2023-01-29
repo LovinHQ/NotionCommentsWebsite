@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
+import clsx from 'clsx'
 
 export function Fence({ children, language }) {
   return (
@@ -10,7 +11,7 @@ export function Fence({ children, language }) {
       theme={undefined}
     >
       {({ className, style, tokens, getTokenProps }) => (
-        <pre className={className} style={style}>
+        <pre className={clsx(className, '')} style={style}>
           <code>
             {tokens.map((line, lineIndex) => (
               <Fragment key={lineIndex}>

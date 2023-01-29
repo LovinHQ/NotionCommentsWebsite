@@ -6,6 +6,7 @@ import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { DocLayout } from '@/components/DocLayout'
 import 'focus-visible'
 import { Analytics } from '@vercel/analytics/react'
+import { Header } from '@/components/Header'
 
 function getNodeText(node) {
   let text = ''

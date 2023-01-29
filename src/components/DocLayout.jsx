@@ -4,101 +4,66 @@ import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
 import { Logo } from '@/components/Logo'
-import { MobileNavigation } from '@/components/MobileNavigation'
 import { Navigation } from '@/components/Navigation'
+import { Header } from '@/components/Header'
 import { Prose } from '@/components/Prose'
 
 const navigation = [
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/' },
-      { title: 'Installation', href: '/docs/installation' },
+      { title: 'Getting started', href: '/guides' },
+      { title: 'Installation', href: '/guides/installation' },
     ],
   },
   {
     title: 'Core concepts',
     links: [
-      { title: 'Understanding caching', href: '/docs/understanding-caching' },
+      { title: 'Understanding caching', href: '/guides/understanding-caching' },
       {
         title: 'Predicting user behavior',
-        href: '/docs/predicting-user-behavior',
+        href: '/guides/predicting-user-behavior',
       },
-      { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
+      { title: 'Basics of time-travel', href: '/guides/basics-of-time-travel' },
       {
         title: 'Introduction to string theory',
-        href: '/docs/introduction-to-string-theory',
+        href: '/guides/introduction-to-string-theory',
       },
-      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+      { title: 'The butterfly effect', href: '/guides/the-butterfly-effect' },
     ],
   },
   {
     title: 'Advanced guides',
     links: [
-      { title: 'Writing plugins', href: '/docs/writing-plugins' },
-      { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
-      { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
-      { title: 'Testing', href: '/docs/testing' },
-      { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
+      { title: 'Writing plugins', href: '/guides/writing-plugins' },
+      { title: 'Neuralink integration', href: '/guides/neuralink-integration' },
+      { title: 'Temporal paradoxes', href: '/guides/temporal-paradoxes' },
+      { title: 'Testing', href: '/guides/testing' },
+      { title: 'Compile-time caching', href: '/guides/compile-time-caching' },
       {
         title: 'Predictive data generation',
-        href: '/docs/predictive-data-generation',
+        href: '/guides/predictive-data-generation',
       },
     ],
   },
   {
     title: 'API reference',
     links: [
-      { title: 'CacheAdvance.predict()', href: '/docs/cacheadvance-predict' },
-      { title: 'CacheAdvance.flush()', href: '/docs/cacheadvance-flush' },
-      { title: 'CacheAdvance.revert()', href: '/docs/cacheadvance-revert' },
-      { title: 'CacheAdvance.regret()', href: '/docs/cacheadvance-regret' },
+      { title: 'CacheAdvance.predict()', href: '/guides/cacheadvance-predict' },
+      { title: 'CacheAdvance.flush()', href: '/guides/cacheadvance-flush' },
+      { title: 'CacheAdvance.revert()', href: '/guides/cacheadvance-revert' },
+      { title: 'CacheAdvance.regret()', href: '/guides/cacheadvance-regret' },
     ],
   },
   {
     title: 'Contributing',
     links: [
-      { title: 'How to contribute', href: '/docs/how-to-contribute' },
-      { title: 'Architecture guide', href: '/docs/architecture-guide' },
-      { title: 'Design principles', href: '/docs/design-principles' },
+      { title: 'How to contribute', href: '/guides/how-to-contribute' },
+      { title: 'Architecture guide', href: '/guides/architecture-guide' },
+      { title: 'Design principles', href: '/guides/design-principles' },
     ],
   },
 ]
-
-function Header({ navigation }) {
-  let [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    function onScroll() {
-      setIsScrolled(window.scrollY > 0)
-    }
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => {
-      window.removeEventListener('scroll', onScroll, { passive: true })
-    }
-  }, [])
-
-  return (
-    <header
-      className={clsx(
-        'sticky top-0 z-50 flex flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8',
-        isScrolled
-          ? 'dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75'
-          : 'dark:bg-transparent'
-      )}
-    >
-      <div className="mr-6 flex lg:hidden">
-        <MobileNavigation navigation={navigation} />
-      </div>
-      <div className="relative flex flex-grow basis-0 items-center">
-        <Link href="/" aria-label="Home page">
-          <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-sky-100 lg:block" />
-        </Link>
-      </div>
-    </header>
-  )
-}
 
 function useTableOfContents(tableOfContents) {
   let [currentSection, setCurrentSection] = useState(tableOfContents[0]?.id)
@@ -168,29 +133,23 @@ export function DocLayout({ children, title, tableOfContents }) {
     <>
       <Header navigation={navigation} />
 
-      <div className="max-w-8xl relative mx-auto flex justify-center sm:px-2 lg:px-8 xl:px-12">
-        <div className="hidden lg:relative lg:block lg:flex-none">
-          <div className="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden" />
-          <div className="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
-          <div className="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block" />
-          <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5">
-            <Navigation
-              navigation={navigation}
-              className="w-64 pr-8 xl:w-72 xl:pr-16"
-            />
+      <div className="max-w-8xl relative mx-auto flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className="relative -ml-4 hidden flex-none bg-gray-50 sm:-ml-6 md:block md:px-8 lg:-ml-8">
+          <div className="sticky top-16 h-[calc(100vh-64px)] overflow-y-auto overflow-x-hidden pt-8 pb-16 pl-0.5">
+            <Navigation navigation={navigation} className="w-64" />
           </div>
         </div>
-        <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
-          <article>
+        <div className="min-w-0 max-w-2xl flex-auto py-16 md:px-6 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+          <article className="pt-8">
             {(title || section) && (
               <header className="mb-9 space-y-1">
                 {section && (
-                  <p className="font-display text-sm font-medium text-sky-500">
+                  <p className="font-display text-sm font-medium text-[var(--accent-base)]">
                     {section.title}
                   </p>
                 )}
                 {title && (
-                  <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
+                  <h1 className="font-display text-3xl font-medium tracking-tight text-[var(--label-title)] ">
                     {title}
                   </h1>
                 )}
@@ -198,16 +157,16 @@ export function DocLayout({ children, title, tableOfContents }) {
             )}
             <Prose>{children}</Prose>
           </article>
-          <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+          <dl className="mt-12 flex border-t border-[var(--bg-border)] pt-6">
             {previousPage && (
               <div>
-                <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
+                <dt className="text-sm font-semibold text-[var(--label-base)] ">
                   Previous
                 </dt>
                 <dd className="mt-1">
                   <Link
                     href={previousPage.href}
-                    className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+                    className="text-base font-medium  text-[var(--label-muted)] transition duration-150 ease-out hover:text-[var(--label-base)] "
                   >
                     <span aria-hidden="true">&larr;</span> {previousPage.title}
                   </Link>
@@ -216,13 +175,13 @@ export function DocLayout({ children, title, tableOfContents }) {
             )}
             {nextPage && (
               <div className="ml-auto text-right">
-                <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
+                <dt className="text-sm font-semibold text-[var(--label-base)]  ">
                   Next
                 </dt>
                 <dd className="mt-1">
                   <Link
                     href={nextPage.href}
-                    className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+                    className="text-base font-medium  text-[var(--label-muted)] transition duration-150 ease-out hover:text-[var(--label-base)] "
                   >
                     {nextPage.title} <span aria-hidden="true">&rarr;</span>
                   </Link>
@@ -231,15 +190,15 @@ export function DocLayout({ children, title, tableOfContents }) {
             )}
           </dl>
         </div>
-        <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+        <div className="hidden xl:sticky xl:top-[4rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4rem)] xl:flex-none xl:overflow-y-auto xl:py-8 xl:pr-6">
           <nav aria-labelledby="on-this-page-title" className="w-56">
             {tableOfContents.length > 0 && (
               <>
                 <h2
                   id="on-this-page-title"
-                  className="font-display text-sm font-medium text-slate-900 dark:text-white"
+                  className="text-sm font-semibold text-[var(--label-base)]"
                 >
-                  On this page
+                  Table of Contents
                 </h2>
                 <ol role="list" className="mt-4 space-y-3 text-sm">
                   {tableOfContents.map((section) => (
@@ -249,8 +208,8 @@ export function DocLayout({ children, title, tableOfContents }) {
                           href={`#${section.id}`}
                           className={clsx(
                             isActive(section)
-                              ? 'text-sky-500'
-                              : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+                              ? 'text-[var(--accent-base)]'
+                              : 'font-normal text-[var(--label-muted)] transition duration-150 ease-out hover:text-[var(--label-base)]'
                           )}
                         >
                           {section.title}
@@ -259,7 +218,7 @@ export function DocLayout({ children, title, tableOfContents }) {
                       {section.children.length > 0 && (
                         <ol
                           role="list"
-                          className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400"
+                          className="mt-2 space-y-3 pl-4 text-[var(--label-muted)]"
                         >
                           {section.children.map((subSection) => (
                             <li key={subSection.id}>
@@ -267,8 +226,8 @@ export function DocLayout({ children, title, tableOfContents }) {
                                 href={`#${subSection.id}`}
                                 className={
                                   isActive(subSection)
-                                    ? 'text-sky-500'
-                                    : 'hover:text-slate-600 dark:hover:text-slate-300'
+                                    ? 'text-[var(--accent-base)]'
+                                    : 'font-normal text-[var(--label-muted)] transition duration-150 ease-out hover:text-[var(--label-base)]'
                                 }
                               >
                                 {subSection.title}
