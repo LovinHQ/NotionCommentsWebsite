@@ -12,6 +12,7 @@ export default function Pricing() {
     <>
       <Head>
         <title>Pricing - NotionComments</title>
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Header />
       <main className="mt-32 flex flex-col gap-32 md:mt-48">

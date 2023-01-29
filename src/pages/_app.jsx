@@ -80,6 +80,7 @@ export default function App({ Component, pageProps }) {
       <>
         <Head>
           <title>{pageTitle}</title>
+          <link rel="icon" href="/logo.png" />
           {description && <meta name="description" content={description} />}
         </Head>
         <DocLayout title={title} tableOfContents={tableOfContents}>
