@@ -54,7 +54,7 @@ const Feature = ({ icon, title, description, image, position }) => {
         position === 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
       )}
     >
-      <div className="flex-1 overflow-hidden rounded-3xl border border-[var(--bg-border)] bg-[var(--bg-sub)] shadow-md">
+      <div className="flex-1 overflow-hidden rounded-xl bg-[var(--bg-sub)]">
         <Image src={image} alt={title} width="0" height="0" />
       </div>
       <div className="flex flex-1 flex-col gap-10">
@@ -62,7 +62,7 @@ const Feature = ({ icon, title, description, image, position }) => {
           {icon}
         </div>
         <div className="flex flex-col gap-4">
-          <h2 className="text-3xl font-bold leading-tight text-[var(--label-title)]">
+          <h2 className="text-2xl font-bold leading-tight text-[var(--label-title)]">
             {title}
           </h2>
           <h3 className="flex text-left text-lg font-normal leading-normal text-[var(--label-muted)]">

@@ -79,7 +79,7 @@ export function DocLayout({ children, title, tableOfContents }) {
 
       <div className="max-w-8xl relative mx-auto flex justify-center px-4 sm:px-6 lg:px-8">
         <div className="relative -ml-4 hidden flex-none border-r border-[var(--bg-border)] bg-[var(--bg-sub)] sm:-ml-6 md:block md:px-8 lg:-ml-8">
-          <div className="sticky top-16 h-[calc(100vh-64px)] overflow-y-auto overflow-x-hidden pt-8 pb-16 pl-0.5">
+          <div className="sticky top-14 h-[calc(100vh-64px)] overflow-y-auto overflow-x-hidden pt-8 pb-16 pl-0.5">
             <Navigation navigation={navigation} className="w-64" />
           </div>
         </div>

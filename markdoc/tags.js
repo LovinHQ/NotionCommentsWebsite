@@ -1,5 +1,6 @@
 import { Callout } from '@/components/Callout'
-import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import { QuickLinkCard, QuickLinkCards } from '@/components/QuickLinkCards'
+import JSXStyle from 'styled-jsx/style'
 
 const tags = {
   callout: {
@@ -30,11 +31,11 @@ const tags = {
     ),
   },
   'quick-links': {
-    render: QuickLinks,
+    render: QuickLinkCards,
   },
   'quick-link': {
     selfClosing: true,
-    render: QuickLink,
+    render: QuickLinkCard,
     attributes: {
       title: { type: String },
       description: { type: String },

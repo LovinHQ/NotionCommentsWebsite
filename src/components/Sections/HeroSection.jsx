@@ -16,7 +16,7 @@ export function HeroBackground() {
   }
 
   return (
-    <div className="gradient-opacity-top-bottom absolute top-0 mt-16 w-screen overflow-hidden">
+    <div className="gradient-opacity-top-bottom absolute top-0 mt-14 w-screen overflow-hidden">
       {Array(14)
         .fill()
         .map((_, i) => (

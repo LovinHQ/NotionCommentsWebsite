@@ -38,16 +38,22 @@ function CTABackground() {
 
 export function CallToAction() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <Container className="">
-        <div className="z-10 flex flex-col items-center justify-center gap-6 overflow-hidden rounded-3xl border border-[var(--bg-border)] bg-[var(--bg-sub)] py-8 shadow-2xl sm:gap-12 sm:py-16 sm:px-16">
-          <div className="relative h-full w-full -translate-y-32 opacity-80 sm:-translate-x-16 md:-translate-x-[72px]">
+    <div className="flex flex-col items-center justify-center overflow-hidden">
+      <Container className="overflow-hidden">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-6 overflow-hidden rounded-3xl border border-[var(--bg-border)] bg-[var(--bg-sub)] py-8 shadow-2xl sm:gap-12 sm:py-16 sm:px-16">
+          <div
+            className="absolute z-10 h-[calc(100%)] w-[calc(100%)]"
+            style={{
+              background: 'radial-gradient(transparent, var(--bg-sub))',
+            }}
+          />
+          <div className="relative z-0 h-full w-full -translate-y-32 opacity-80 sm:-translate-x-16 md:-translate-x-[72px]">
             <CTABackground />
           </div>
-          <div className="z-10 h-12 origin-top scale-[200%]">
+          <div className="z-20 h-12 origin-top scale-[200%]">
             <Logo />
           </div>
-          <h2 className="z-10 w-full px-4 text-center text-2xl font-bold text-[var(--label-title)] sm:text-3xl sm:text-4xl">
+          <h2 className="z-20 w-full px-4 text-center text-2xl font-bold text-[var(--label-title)] sm:text-3xl">
             Boost engagement with your audience today
           </h2>
           <PrimaryCTAButton
@@ -56,7 +62,7 @@ export function CallToAction() {
             onClick={() => {
               window.open('https://app.notioncomments.com')
             }}
-            className="z-10"
+            className="z-20"
           />
         </div>
       </Container>
