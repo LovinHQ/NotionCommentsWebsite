@@ -44,11 +44,11 @@ export function Hero() {
       <HeroBackground />
       <Container className="z-10 flex w-screen flex-col">
         <h1 className="max-w-[720px] text-4xl font-bold leading-tight tracking-tight text-[var(--label-title)] sm:text-7xl">
-          Comment made easy for your Notion post
+          Comment section made for your Notion blog
         </h1>
         <p className="mt-8 max-w-[720px] text-lg leading-normal text-[var(--label-muted)] sm:text-2xl">
-          Create a comment embed in your Notion page that everyone can use. It
-          takes one minute to set up, and it’s free!
+          Create a comment embed in your Notion page or website to engage with
+          all your audience. It takes one minute to set up, and it’s free!
         </p>
         <div className="mt-16 flex flex-col gap-6 sm:flex-row">
           <PrimaryCTAButton
@@ -87,9 +87,10 @@ export function Hero() {
           <p className="font-display text-base font-normal leading-normal text-[var(--label-muted)]">
             Join{' '}
             <span className="font-semibold text-[var(--label-base)]">
-              100+ content creators and bloggers
+              100+ bloggers and content creators
             </span>{' '}
-            who use NotionComments to engage with their audience.
+            who use NotionComments to interact and make connections with their
+            audience.
           </p>
         </div>
       </Container>

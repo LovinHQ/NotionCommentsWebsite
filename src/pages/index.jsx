@@ -11,7 +11,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>NotionComments - Comment made easy for your Notion post</title>
+        <title>
+          NotionComments - Add a comment section to your Notion blog.
+        </title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Header />
