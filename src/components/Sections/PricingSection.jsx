@@ -53,7 +53,7 @@ export function PricingSection() {
               <div className="flex items-center gap-3">
                 <CheckIcon className="h-4 w-4 text-[var(--accent-base)]" />
                 <p className="flex text-left text-base font-normal leading-normal text-[var(--label-base)]">
-                  20 comment embeds
+                  25 comment embeds
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -81,7 +81,7 @@ export function PricingSection() {
                 $29.9
               </h2>
               <div className="text-base font-normal text-[var(--label-muted)]">
-                for life
+                lifetime access
               </div>
             </div>
             <div className="-my-4 flex h-6 items-center">
