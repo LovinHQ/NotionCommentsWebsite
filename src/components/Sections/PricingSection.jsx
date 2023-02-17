@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import * as ToggleGroup from '@radix-ui/react-toggle-group'
+
 import { Container } from '@/components/Container'
+import CheckIcon from '@/images/icons/check.svg'
+import StripeBackground from '@/images/resources/stripe.svg'
+
+import PrimaryCTAButton from '../Buttons/PrimaryCTAButton'
+import SecondaryCTAButton from '../Buttons/SecondaryCTAButton'
 import SectionTag from '../SectionTag'
 import { HeroBackground } from './HeroSection'
-import CheckIcon from '@/images/icons/check.svg'
-import SecondaryCTAButton from '../Buttons/SecondaryCTAButton'
-import PrimaryCTAButton from '../Buttons/PrimaryCTAButton'
-import StripeBackground from '@/images/resources/stripe.svg'
 
 export function PricingSection() {
   const [subscriptionCycle, setSubscriptionCycle] = useState('monthly')
@@ -77,15 +78,15 @@ export function PricingSection() {
             </h3>
             <div className="flex items-baseline gap-2">
               <h2 className="flex text-left text-3xl font-bold leading-normal text-[var(--label-base)]">
-                $4
+                $29.9
               </h2>
               <div className="text-base font-normal text-[var(--label-muted)]">
-                / month
+                for life
               </div>
             </div>
             <div className="-my-4 flex h-6 items-center">
               <div className="h-px grow bg-gradient-to-r from-transparent to-[var(--accent-base)]" />
-              <ToggleGroup.Root
+              {/* <ToggleGroup.Root
                 type="single"
                 defaultValue="monthly"
                 aria-label="Pro subscription cycle"
@@ -105,7 +106,7 @@ export function PricingSection() {
                 >
                   Yearly
                 </ToggleGroup.Item>
-              </ToggleGroup.Root>
+              </ToggleGroup.Root> */}
               <div className="h-px grow bg-gradient-to-l from-transparent to-[var(--accent-base)]" />
             </div>
             <div className="flex flex-1 flex-col gap-4">
@@ -133,7 +134,15 @@ export function PricingSection() {
                 </p>
               </div>
             </div>
-            <PrimaryCTAButton isIcon={false} text="Get started with Pro" />
+            <PrimaryCTAButton
+              isIcon={false}
+              text="Get started with Pro"
+              onClick={() => {
+                window.open(
+                  'https://notioncomments.lemonsqueezy.com/checkout/buy/ab14d38a-3fc1-4b50-a0ca-404b298e8845'
+                )
+              }}
+            />
           </div>
         </div>
       </Container>
